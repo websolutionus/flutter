@@ -1,26 +1,53 @@
 
-//Assignment of Module 2
+//Assignment of Module 3
 
 void main(){
 
-  List<int> subjects = [85, 92, 78, 65, 88, 72];
-  int totalSubject = subjects.length;
-  int totalNumber = 0;
+  Car car1 = Car("Toyota", "Camry", 2020);
+  Car car2 = Car("Honda", "Civic", 2018);
+  Car car3 = Car("Ford", "F-150", 2015);
+  double car1Driven = car1.drive(10000.00);
+  double car2Driven = car1.drive(8000.00);
+  double car3Driven = car1.drive(15000.00);
+  print('Car 1: ${car1.getBrand()} ${car1.getModel()} ${car1.getYear()} Miles: ${car1Driven.round()} Age: ${car1.getAge()}');
+  print('Car 2: ${car2.getBrand()} ${car2.getModel()}  ${car1.getYear()} Miles: ${car2Driven.round()} Age: ${car2.getAge()}');
+  print('Car 3: ${car3.getBrand()} ${car3.getModel()} ${car1.getYear()} Miles: ${car3Driven.round()} Age: ${car3.getAge()}');
+  print('Total number of cars created: ${Car.numberOfCar}');
 
-  for( int i = 0; i<subjects.length; i++ ){
-    totalNumber += subjects[i];
+}
+
+class Car{
+  String brand;
+  String model;
+  int year;
+  late double milesDriven;
+  late double miles;
+  static int numberOfCar = 0;
+
+  Car(this.brand, this.model, this.year){
+    Car.numberOfCar++;
+  }
+  drive(double miles){
+    return this.miles = miles;
+  }
+  getMilesDriven(){
+    return milesDriven = this.miles;
   }
 
-  num average = totalNumber/totalSubject;
-  int round = average.round();
+  getBrand(){
+    return brand;
+  }
 
-  print('Student\'s average grade: $average');
-  print('Rounded average: $round');
+  getModel(){
+    return model;
+  }
 
-  if(round>=70){
-    print('Passed');
-  }else{
-    print('Failed');
+  getYear(){
+    return year;
+  }
+
+  getAge(){
+    return 2023-year;
   }
 
 }
@@ -28,6 +55,39 @@ void main(){
 
 
 
+
+
+
+
+
+
+
+
+
+//Assignment of Module 2
+
+// void main(){
+//
+//   List<int> subjects = [85, 92, 78, 65, 88, 72];
+//   int totalSubject = subjects.length;
+//   int totalNumber = 0;
+//
+//   for( int i = 0; i<subjects.length; i++ ){
+//     totalNumber += subjects[i];
+//   }
+//
+//   num average = totalNumber/totalSubject;
+//   int round = average.round();
+//
+//   print('Student\'s average grade: $average');
+//   print('Rounded average: $round');
+//
+//   if(round>=70){
+//     print('Passed');
+//   }else{
+//     print('Failed');
+//   }
+// }
 
 
 //Assignment of Module 1
